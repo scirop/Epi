@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Widget</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -15,13 +16,55 @@
 </head>
 
 <body>
-
+  <div class="desk">
     <div class="container clearfix">
+      <div class="chat">
+        <div class="chat-header clearfix">
+          <img src="static/images/logo.png" alt="avatar" />
+          <div class="chat-about">
+            <div class="chat-with">Epi</div>
+            <div class="chat-num-messages">The Knowledge Bot</div>
+          </div>
+        </div> <!-- end chat-header -->
 
+        <div class="chat-history">
+          <ul>
+            <li>
+              <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Epi</span>
+                <span class="message-data-time">10:12 AM, Today</span>
+              </div>
+              <div class="message my-message">
+                Hi! I am Epi... I can help you find KB Articles to resolve your issues.
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div> <!-- end chat-history -->
+
+        <div class="chat-message clearfix">
+          <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+
+          <!--<i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+          <i class="fa fa-file-image-o"></i>-->
+
+          <button>Send</button>
+
+        </div> <!-- end chat-message -->
+
+      </div> <!-- end chat -->
+
+    </div> <!-- end container -->
+  </div>
+
+<!--mobile friendly design-->
+<div class="div-only-mobile">
+  <div class="container clearfix">
     <div class="chat">
       <div class="chat-header clearfix">
         <img src="static/images/logo.png" alt="avatar" />
-
         <div class="chat-about">
           <div class="chat-with">Epi</div>
           <div class="chat-num-messages">The Knowledge Bot</div>
@@ -30,7 +73,6 @@
 
       <div class="chat-history">
         <ul>
-
           <li>
             <div class="message-data">
               <span class="message-data-name"><i class="fa fa-circle online"></i> Epi</span>
@@ -59,6 +101,8 @@
     </div> <!-- end chat -->
 
   </div> <!-- end container -->
+</div>
+
 
 <script id="message-template" type="text/x-handlebars-template">
   <li class="clearfix">

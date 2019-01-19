@@ -8,7 +8,8 @@ body {
   color: white;
 }
 
-.container {
+
+.desk .container {
   margin: 0 auto;
   width: 400px;
   background: #444753;
@@ -173,4 +174,24 @@ body {
   content: " ";
   clear: both;
   height: 0;
+}
+
+.div-only-mobile {
+    display: none;
+}
+.desk {
+  width: 400px;
+    display: block;
+}
+@media screen and (max-width: 849px) {
+
+.desk {
+  display:none
+}
+
+.div-only-mobile {
+  width: 100%;
+    display: block;
+}
+
 }
